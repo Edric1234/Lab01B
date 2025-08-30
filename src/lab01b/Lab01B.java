@@ -33,7 +33,7 @@ public class Lab01B {
         System.out.print("What is the minimum passing score? ");
         double minPassingScore = input.nextInt();
         System.out.println(new PassFailExam(questions,missed,minPassingScore));
-        
+    /**    
         System.out.println("\nStep 4: ");
         System.out.println("Term Paper:");
         System.out.print("Grammar points: ");
@@ -66,8 +66,7 @@ public class Lab01B {
         System.out.println(cG);
         System.out.printf("Average Score: %.1f\nHighest Score: %.1f\nLowest Score: %.1f\n",
                 cG.getAverage(),cG.getHighest().getScore(),cG.getLowest().getScore());
-        
-        
+        **/
     }
     
 }
