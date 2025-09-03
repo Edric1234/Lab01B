@@ -14,14 +14,23 @@ public class Essay extends GradedActivity {
     protected double correctLength;
     protected double content;
 
+    public Essay() {
+    }
+
+    public Essay(double grammar, double spelling, double correctLength, double content) {
+        this.grammar = grammar;
+        this.spelling = spelling;
+        this.correctLength = correctLength;
+        this.content = content;
+    }
+
     public void setScore(double grammar, double spelling, double length, double content) {
-        score = grammar + spelling + correctLength + content;
-        super.setScore(score); 
+        super.score = grammar + spelling + length + content;
     }
 
     @Override
     public String toString() {
-        return "Total points: " + score
+        return "Total points: " + score + "\n"
                 + "Grade: " + getGrade();
     }
 

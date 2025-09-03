@@ -13,6 +13,7 @@ public class CourseGrades implements Analyzable{
    protected int NUM_GRADES = 4;
 
     public CourseGrades() {
+        this.grades = new GradedActivity[NUM_GRADES];
     }
    
     @Override
@@ -65,11 +66,11 @@ public class CourseGrades implements Analyzable{
     public String toString() {
         return "Lab score: "  + grades[0].getScore() + "\t" + "Grade: " 
                 + grades[0].getGrade() + "\n"
-                + "Pass/Fail Exam Score: " + grades[1] + "\t" + "Grade: " 
+                + "Pass/Fail Exam Score: " + grades[1].getScore() + "\t" + "Grade: " 
                 + grades[1].getGrade() + "\n"
-                + "Essay Score: " + grades[2] + "\t" + "Grade: " 
-                + grades[1].getGrade() + "\n"
-                + "Final Exam Score: " + grades[3] + "\t" + "Grades: " 
+                + "Essay Score: " + grades[2].getScore() + "\t" + "Grade: " 
+                + grades[2].getGrade() + "\n"
+                + "Final Exam Score: " + grades[3].getScore() + "\t" + "Grades: " 
                 + grades[3].getGrade()  + "\n";
     }
 }

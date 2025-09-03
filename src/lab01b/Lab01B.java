@@ -17,22 +17,33 @@ public class Lab01B {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Step 2: ");
         Scanner input = new Scanner(System.in);
+
+        /**System.out.println("Step 2: ");
         System.out.print("How many quetions are on the final exam? ");
         int questions = input.nextInt();
         System.out.print("How many questions did the student miss? ");
         int missed = input.nextInt();
-        System.out.println(new FinalExam(questions,missed));
+        double counts = 1;
+        System.out.println("Each question counts " + counts + " points");
+        FinalExam fE1 = new FinalExam(questions, missed, counts);
+        System.out.println("The exam score is " + fE1.getScore());
+        System.out.println("The exam grade is " + fE1.getGrade());
+        
         
         System.out.println("\nStep 3: ");
         System.out.print("How many quetions are on the final exam? ");
-        questions = input.nextInt();
+        int questions1 = input.nextInt();
         System.out.print("How many questions did the student miss? ");
-        missed = input.nextInt();
+        int missed1 = input.nextInt();
         System.out.print("What is the minimum passing score? ");
         double minPassingScore = input.nextInt();
-        System.out.println(new PassFailExam(questions,missed,minPassingScore));
+        PassFailExam pFE1 = new PassFailExam(questions1, missed1, minPassingScore);
+        int counts1 = 1;
+        System.out.println("Each question counts " + counts1 + " points");
+        System.out.println("The exam score is " + pFE1.getScore());
+        System.out.println("The exam grade is " + pFE1.getGrade());
+        
         
         System.out.println("\nStep 4: ");
         System.out.println("Term Paper:");
@@ -42,11 +53,12 @@ public class Lab01B {
         double spelling = input.nextDouble();
         System.out.print("Length points: ");
         double length = input.nextDouble();
-        System.out.print("Content points: ");
+        System.out.println("Content points: ");
         double content = input.nextDouble();
-        Essay e1 = new Essay();
-        e1.setScore(length, length, length, content);
+        Essay e1 = new Essay(grammar, spelling, length, content);
+        e1.setScore(grammar, spelling, length, content);
         System.out.println(e1.toString());
+        **/
         
         System.out.println("\nStep 5:");
         CourseGrades cG = new CourseGrades();
@@ -61,6 +73,7 @@ public class Lab01B {
         FinalExam fE = new FinalExam(50,1);
         cG.setFinalExam(fE);
         System.out.println(cG);
+        
         
         System.out.println("\nStep 6:");
         System.out.println(cG);

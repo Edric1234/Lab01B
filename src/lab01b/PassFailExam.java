@@ -17,7 +17,8 @@ public class PassFailExam extends PassFailActivity {
         super(minPassingScore);
         this.numQuestions = numQuestions;
         this.numMissed = numMissed;
-        score = 100.0 - (numMissed * pointsEach);
+        this.pointsEach = 100 / this.numQuestions;
+        double score = 100.0 - (numMissed * pointsEach);
         setScore(score);
     }
 
