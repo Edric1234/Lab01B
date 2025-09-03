@@ -17,11 +17,8 @@ public class PassFailExam extends PassFailActivity {
         super(minPassingScore);
         this.numQuestions = numQuestions;
         this.numMissed = numMissed;
-        System.out.println("Each question counts " + pointsEach + "points");
         score = 100.0 - (numMissed * pointsEach);
-        System.out.println("The exam score is " + score);
         setScore(score);
-        System.out.println("The exam grade is " + getGrade());
     }
 
     public double getPointsEach() {

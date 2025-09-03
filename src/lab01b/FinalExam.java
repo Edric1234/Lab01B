@@ -18,11 +18,9 @@ public class FinalExam extends GradedActivity {
         this.numMissed = numMissed;
         
         pointsEach = 100.0 / numQuestions;
-        System.out.println("Each question counts " + pointsEach + "points");
         score = 100.0 - (numMissed * pointsEach);
-        System.out.println("The exam score is " + score);
         setScore(score);
-        System.out.println("The exam grade is " + getGrade());
+        
     }
 
     public double getPointsEach() {
