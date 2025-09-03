@@ -14,10 +14,15 @@ public class Essay extends GradedActivity {
     protected double correctLength;
     protected double content;
 
-    @Override
-    public void setScore(double score) {
+    public void setScore(double grammar, double spelling, double length, double content) {
         score = grammar + spelling + correctLength + content;
         super.setScore(score); 
+    }
+
+    @Override
+    public String toString() {
+        return "Total points: " + score
+                + "Grade: " + getGrade();
     }
 
     public double getGrammar() {
